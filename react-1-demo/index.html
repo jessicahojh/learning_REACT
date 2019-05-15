@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>React Demos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            padding: 50px 0 50px 100px;
+            margin: 0 50px 50px 50px;
+            color: #222;
+            background: transparent url("react.svg") no-repeat 20px center / 70px;
+            border-bottom: 1px solid #222;
+        }
+
+        dt {
+          line-height: 1.8em;
+        }
+
+        dl {
+            margin-left: 100px;
+        }
+
+        dt a {
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+        }
+
+        dt a:hover {
+          border-bottom-color: transparent;
+        }
+
+        dd {
+            margin-bottom: 1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>React Demos</h1>
+
+<dl>
+    <dt><a href="hello/index.html">Hello</a></dt>
+    <dd>Simple "Hello, World".</dd>
+
+    <dt><a href="hello-2/index.html">Hello-2</a></dt>
+    <dd>Reusable "Hello World", with configurable text.</dd>
+
+    <dt><a href="boxed-letters/index.html">Boxed-Letters</a></dt>
+    <dd>More complex example that iterates over a string and generates JSX</dd>
+</dl>
+
+<script>
+    // bad monkey. read directions!
+    if (window.location.href.slice(0, 4) != "http") {
+        const dl = document.querySelector("dl");
+        dl.innerHTML = (
+            "<b>OH SNAP.</b> You must run this demo using SimpleHTTPServer.<br><br>" +
+            "In <i>react-demo</i> directory, run <i>python -m SimpleHTTPServer</i>" +
+            " and visit as <a href='http://localhost:8000'>http://localhost:8000</a>."
+        );
+    }
+</script>
+</body>
+</html>

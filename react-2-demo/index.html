@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>React Demos</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      padding: 50px 0 50px 100px;
+      color: white;
+      background: #222 url("react.svg") no-repeat 20px center / 70px;
+    }
+
+    dl {
+      margin-left: 100px;
+    }
+
+    dt a {
+      font-weight: bold;
+      color: #222;
+      text-decoration: none;
+    }
+
+    dd {
+      margin-bottom: 1em;
+      color: #333;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>React Demos</h1>
+
+<dl>
+  <dt><a href="hello/index.html">Hello</a></dt>
+  <dd>Simple "Hello, World".</dd>
+
+  <dt><a href="hello-2/index.html">Hello-2</a></dt>
+  <dd>Reusable "Hello World", with configurable text.</dd>
+
+  <dt><a href="dice/">Dice</a></dt>
+  <dd>Reusable components for rollable dice.</dd>
+
+  <dt><a href="sharkwords/">SharkWords</a></dt>
+  <dd>Hangman-style game, showing event handlers and more complex rendering.</dd>
+
+  <dt><a href="sharkwords-2/">SharkWords-2</a></dt>
+  <dd>More componentized version, with buttons broken out into separate component.</dd>
+
+  <dt><a href="letterguess/">LetterGuess</a></dt>
+  <dd>Letter-guessing game that reuses SharkWords-2 buttons.</dd>
+
+  <dt><a href="http://localhost:5000">Ubermelon Site</a></dt>
+  <dd>Single-page app with different features. A more advnanced demo, with a Flask backend.
+  </dd>
+  <dd><b>Flask server required.</b> Make sure you're running <i>server.py</i> in this
+      directory.
+  </dd>
+  <dd>If not, you can use the
+      <a href="ubermelon">non-Flask version</a>, but you won't get
+      all features.
+  </dd>
+</dl>
+
+<script>
+    // bad monkey. read directions!
+    if (window.location.href.slice(0, 4) != "http") {
+        const dl = document.querySelector("dl");
+        dl.innerHTML = (
+            "<b>OH SNAP.</b> You must run this demo using SimpleHTTPServer.<br><br>" +
+            "In <i>react-demo</i> directory, run <i>python -m SimpleHTTPServer</i>" +
+            " and visit as <a href='http://localhost:8000'>http://localhost:8000</a>."
+        );
+    }
+</script>
+</body>
+</html>

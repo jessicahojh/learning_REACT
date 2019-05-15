@@ -1,0 +1,11 @@
+Test server file
+Set up
+	>>> from server import app
+	>>> client = app.test_client()
+
+Test routes
+	>>> r = client.get('/')
+	>>> assert b'<h1>React AJAX Demo</h1>' in r.data
+
+	>>> r = client.get('/weather.json', query_string={'zipcode': '94110'})
+	>>> assert b"hipsters" in r.data
